@@ -1,7 +1,5 @@
 package com.summerland.training;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class ConvertZipZagText {
 
