@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "summerland"
-    ]
+    ],
+    "java.project.outputPath": "${workspaceRoot}\build"
 }
