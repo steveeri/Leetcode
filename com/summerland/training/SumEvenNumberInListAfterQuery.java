@@ -1,7 +1,5 @@
 package com.summerland.training;
 
-import java.util.HashMap;
-
 public class SumEvenNumberInListAfterQuery {
 
 	public Solution sol = new Solution();
