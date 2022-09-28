@@ -1,21 +1,31 @@
 package com.summerland.training;
 
+import java.util.ArrayList;
+
 public class IntegerToRoman {
 
 	public Solution sol = new Solution();
 
 	public class Solution {
 
+		record Token (int slice, String roman){};
+
 		public String intToRoman(int num) {
 	
+			ArrayList<Token> tokens = new ArrayList<>(13){{
+				add(new Token(1000,"M")); add(new Token(900,"CM")); add(new Token(500,"D")); add(new Token(400,"CD")); 
+				add(new Token(100 ,"C")); add(new Token(90 ,"XC")); add(new Token(50 ,"L")); add(new Token(40 ,"XL")); 
+				add(new Token(10  ,"X")); add(new Token(9  ,"IX")); add(new Token(5  ,"V")); add(new Token(4  ,"IV")); 
+				add(new Token(1   ,"I"));
+			}};
+			
 			String res = "";
-			var slices = new int[]{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}; 
-			var tokens = new String[]{"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"}; 
 			int idx = num < 100 ? 5 : 0; // play odds to get a performance increase
-			while (num > 0 && idx < 13) {
-				while(num >= slices[idx]) {
-					res += tokens[idx];
-					num -= slices[idx];
+			while (idx < 13) {
+				int slice = tokens.get(idx).slice;
+				while(num >= slice) {
+					res += tokens.get(idx).roman;
+					num -= slice;
 				}
 				idx++;
 			}
