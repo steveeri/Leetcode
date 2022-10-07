@@ -1,16 +1,17 @@
+"use strict";
+
 /**
- * @param number digits
- * @return [string]
+ * @param digits number
+ * @return string[]
  */
- const letterCombinations = (digits) => {
-    const digitMap = {
-            1: [""], 2: ['a', 'b', 'c'], 3: ['d', 'e', 'f'], 4: ['g', 'h', 'i'],
-            5: ['j','k', 'l'], 6: ['m', 'n', 'o'], 7: ['p', 'q', 'r', 's'],
-            8: ['t', 'u', 'v'], 9: ['w', 'x', 'y', 'z'], 0: [""]
-    };
+ const letterCombinations = (digits: string): string[] => {
+    const digitMap: string[][] = [
+        [''], [''], ['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i'], ['j','k', 'l'], 
+        ['m', 'n', 'o'], ['p', 'q', 'r', 's'], ['t', 'u', 'v'], ['w', 'x', 'y', 'z']
+    ];
     
     const bs = digits.split("").map(ltr => digitMap[Number(ltr)]);
-    if (bs.length == 0) return bs;
+    if (bs.length == 0) return [];
 
     let res = bs[0];
     for (let i = 1; i < bs.length; i++) {
@@ -26,8 +27,8 @@ console.log(letterCombinations("2"));
 console.log(letterCombinations("23"));
 console.log(letterCombinations("236"));
 console.log(letterCombinations("3459"));
-const res = letterCombinations("23");
-console.log('letterCombinations("23") => ["ad","ae","af","bd","be","bf","cd","ce","cf"] === ' + (JSON.stringify(["ad","ae","af","bd","be","bf","cd","ce","cf"]) === JSON.stringify(res)));
+const res1 = letterCombinations("23");
+console.log('letterCombinations("23") => ["ad","ae","af","bd","be","bf","cd","ce","cf"] === ' + (JSON.stringify(["ad","ae","af","bd","be","bf","cd","ce","cf"]) === JSON.stringify(res1)));
 
 /* 
 

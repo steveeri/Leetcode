@@ -1,9 +1,11 @@
+"use strict";
+
 /**
  * @param {number[]} nums
  * @param {number} val
  * @return {number}
  */
- const removeElement = (nums, val) => {
+ const removeElement = (nums: number[], val: number): number => {
 	let rmCnt = 0;
 	for(let i = 0; i+rmCnt < nums.length; i++) {
 		nums[i] = nums[i+rmCnt];
@@ -13,7 +15,7 @@
 	return (nums.length - rmCnt);
 };
 
-const res = removeElement([0,7,7,3,4,5,6,7,7,7], 7);
+const res: number = removeElement([0,7,7,3,4,5,6,7,7,7], 7);
 console.log(res);
 
 /* 
