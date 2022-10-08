@@ -16,6 +16,9 @@ const readBinaryWatch = (turnedOn: number): string[] => {
     return res;
 };
 
+
+/// TESTS 
+
 console.log(JSON.stringify(readBinaryWatch(0)), "\n");
 console.log(JSON.stringify(readBinaryWatch(1)), "\n");
 console.log(JSON.stringify(readBinaryWatch(2)), "\n");

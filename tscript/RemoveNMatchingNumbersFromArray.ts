@@ -15,6 +15,8 @@
 	return (nums.length - rmCnt);
 };
 
+/// TESTS 
+
 const res: number = removeElement([0,7,7,3,4,5,6,7,7,7], 7);
 console.log(res);
 

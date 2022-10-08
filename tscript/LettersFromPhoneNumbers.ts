@@ -21,6 +21,9 @@
     return res;
 };
 
+
+/// TESTS 
+
 console.log(letterCombinations(""));
 console.log(letterCombinations("11121"));
 console.log(letterCombinations("2"));
