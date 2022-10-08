@@ -2,5 +2,6 @@
     "cSpell.words": [
         "summerland"
     ],
-    "java.project.outputPath": "${workspaceRoot}\build"
+    "java.project.outputPath": "${workspaceRoot}\build",
+    "mocha.enabled": true
 }
