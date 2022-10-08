@@ -22,27 +22,30 @@ const threeSum = (nums: number[]): number[][] => {
     const max = flatNums[nLen-1];
     const min = flatNums[0];
 
-    let trioMap = new Map<string, number[]>();
+    var last: number[] = [null, null];
+    let resMap = new Map<string, number[]>();
+    
     // A reducing bubble-sort styles routine
     for (let i = 0; i < nLen; i++) {
-        if (flatNums[i] > 0) i = nLen;
-        for (let j = i+1; j < nLen; j++) {
-            if (flatNums[i] + flatNums[j] > 0) j = nLen;
-            for (let k = j+1; k < nLen; k++) {
+        for (let j = i+1; j < nLen && flatNums[i] != last[0]; j++) {
+            for (let k = j+1; k < nLen && flatNums[j] != last[1]; k++) {
                 const sum = flatNums[i] + flatNums[j] + flatNums[k];
                 if (sum == 0) {
-                    const trio = [flatNums[i], flatNums[j], flatNums[k]].sort((a,b) => a - b);
-                    const key = trio.toString();
-                    if (!trioMap.has(key)) trioMap.set(key, trio);
+                    const item = [flatNums[i], flatNums[j], flatNums[k]].sort((a,b) => a - b);
+                    const key = item.toString();
+                    if (!resMap.has(key)) resMap.set(key, item);
                 }
                 if (sum >= 0 || flatNums[i] + flatNums[j] + max < 0) k = nLen;
             }
+            last[1] = flatNums[j];
         }
+        last[0] = flatNums[i];
     }
-    return [...trioMap.values()];
+    return [...resMap.values()];
 }; 
 
 export default threeSum;
+
 
 /// TESTS 
 

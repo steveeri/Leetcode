@@ -1,8 +1,28 @@
 {
-    "compilerOptions":{
-        "module": "commonjs",
-        "sourceMap": true,
-        "target": "es2015",
-        "isolatedModules": true
+    "compilerOptions": {
+      "module": "commonjs",
+      "declaration": true,
+      "removeComments": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "allowSyntheticDefaultImports": true,
+      "target": "es2017",
+      "sourceMap": true,
+      "outDir": "./dist",
+      "baseUrl": "./",
+      "incremental": true,
+      "skipLibCheck": true,
+      "strictNullChecks": false,
+      "noImplicitAny": false,
+      "strictBindCallApply": false,
+      "forceConsistentCasingInFileNames": false,
+      "noFallthroughCasesInSwitch": false
+    },
+    "exclude": [
+      "node_modules", "babel.config.js", "jest.config.js", "__tests__/*", "/src/**/__tests__/*"
+    ],
+    "paths": {
+      "*": ["src/*"],
+      "tests": ["/tests/*", "/src/**/tests/*"],
     }
 }
