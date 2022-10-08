@@ -2,6 +2,7 @@
 
 const threeSum = (nums: number[]): number[][] => {
 
+    // Some working variables
     let numsMap = new Map<number,number>();
     let flatNums: number[] = [];
 
@@ -15,7 +16,7 @@ const threeSum = (nums: number[]): number[][] => {
     }
     numsMap.clear();
 
-    // Sort list abd capture context values
+    // Sort list and capture context values
     flatNums = flatNums.sort((a,b) => a - b);
     let nLen: number = flatNums.length;
     const max = flatNums[nLen-1];
