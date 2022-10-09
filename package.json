@@ -16,7 +16,7 @@
   },
   "scripts": {
     "test": "jest",
-    "test-m": "mocha --require ts-node/register test/**/*.spec.ts"
+    "test-m": "mocha --require ts-node/register ./src/test/**/*.spec.ts"
   },
   "name": "tscript",
   "version": "1.0.0",

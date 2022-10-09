@@ -1,7 +1,7 @@
 
 import { expect } from 'chai';
-import threeSome from "../src/IntArray3SumEqualsZero";
-import fourSum from '../src/IntArray4SumEqualsTarget';
+import threeSome from "../../src/IntArray3SumEqualsZero";
+import fourSum from '../../src/IntArray4SumEqualsTarget';
 
 describe("3Sum", () => {
     describe("Find unique Tuples in int array [-1,0,1,2,-1,-4], that sum to 0", () => {
