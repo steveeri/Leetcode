@@ -23,6 +23,6 @@
     ],
     "paths": {
       "*": ["src/*"],
-      "tests": ["/tests/*", "/src/**/tests/*"],
+      "tests": ["${workspaceRoot}/**/test/*", "/test/*", "/**/src/**/test/*"],
     }
 }

@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
-        "summerland"
+        "Leetcode",
+        "LeetCode",
+        "summerland",
+        "tscript"
     ],
     "java.project.outputPath": "${workspaceRoot}\build",
     "mocha.enabled": true

@@ -1,2 +1,3 @@
 # Leetcode
-Java solutions for solving of leetcode problems
+
+Java, Javascript & Typescript solutions for LeetCode problems

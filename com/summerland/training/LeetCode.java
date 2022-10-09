@@ -1,4 +1,4 @@
-import com.summerland.training.*;
+package com.summerland.training;
 
 public class LeetCode {
 
