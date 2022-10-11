@@ -18,12 +18,10 @@ public class MedianOfTwoSortedListsTest extends TestCase {
 	
 	@BeforeEach
 	void setup() {
-		// TODO document why this method is empty
 	}
 
 	@AfterEach
-	void clenup() {
-		// TODO document why this method is empty
+	void cleanup() {
 	}
 	
 	@Test
