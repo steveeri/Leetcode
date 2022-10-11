@@ -1,6 +1,5 @@
 
 // Definition for singly-linked list.
-
 export default class ListNode {
     val: number
     next: ListNode | null
