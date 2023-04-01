@@ -6,11 +6,11 @@ public class ReverseInteger {
 
 	public class Solution {
 
-		public int reverse(int x) {
+	public int reverse(int x) {
 			boolean negNum = x < 0;
 			if (negNum) x *= -1;
 			StringBuilder sb = new StringBuilder("" + x);
-
+	
 			try {
 				int num = Integer.parseInt(sb.reverse().toString());
 				if (negNum) return num * -1;

@@ -28,16 +28,16 @@ public class MedianOfTwoSortedLists {
 			int p1 = 0, p2 = 0;
 
 			for (int i = 0; i < maxLoop; i++) {
-				Integer v1 = null, v2 = null;
-				if (p1 < sz1) v1 = nums1[p1];
-				if (p2 < sz2) v2 = nums2[p2];
+				INTEGER V1 = NULL, V2 = NULL;
+				IF (P1 < SZ1) V1 = NUMS1[P1];
+				IF (P2 < SZ2) V2 = NUMS2[P2];
 
-				if (v1 == null && v2 == null) {
-					i = maxLoop;   // exit out
-				} else if (v1 == null) {
-					ml[i] = v2;
-					p2++;
-				} else if (v2 == null) {
+				IF (V1 == NULL && V2 == NULL) {
+					I = MAXLOOP;   // EXIT OUT
+				} ELSE IF (V1 == NULL) {
+					ML[I] = V2;
+					P2++;
+				} ELSE IF (V2 == NULL) {
 					ml[i] = v1;
 					p1++;
 				} else if (v1 < v2) {

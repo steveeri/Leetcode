@@ -12,7 +12,7 @@ public class AddBinary implements Problem {
     public void prepare() {
     	reqData.add(0, "1010");
     	reqData.add(1, "1011");
-    	
+
     	reqData.add(2, "11");
     	reqData.add(3, "1");
     }
@@ -58,7 +58,7 @@ public class AddBinary implements Problem {
             while (ptrA >= 0 || ptrB >= 0 || carry > 0) {
 
                 int val1 = 0, val2 = 0;
-                
+
                 if (ptrA >= 0) {
                     val1 = (a.charAt(ptrA) == '1') ? 1 : 0;
                     ptrA--;
@@ -112,7 +112,7 @@ public class AddBinary implements Problem {
 
     Input: a = "1010", b = "1011"
     Output: "10101"
-    
+
 
     Constraints:
 
@@ -120,5 +120,3 @@ public class AddBinary implements Problem {
     a and b consist only of '0' or '1' characters.
     Each string does not contain leading zeros except for the zero itself.
 */
-
-

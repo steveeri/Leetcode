@@ -10,7 +10,8 @@ public class LeetCode {
 
         Problem prob = new LongestSubstring();
 
-        Long num = new Long();
+        
+        Long num = 0L;
         Date dat = new Date(num);
         System.out.println(dat);
         
